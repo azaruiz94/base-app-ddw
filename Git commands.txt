@@ -1,0 +1,36 @@
+# These commands have to be executed just once
+git init
+git remote add origin <remote_repository_URL>
+
+Notes:
+- Take into account that some projects call their principal branch "master" or "main". If you're starting a new project use the convention you like.
+- The "|" symbol means "or". It's not part of the git command it just means an alternative you can use. Rember: git commands always start with "git".
+-------------------------------------------
+Create a new branch
+- git checkout -b <feature-branch>
+
+Prepare/add changed files for commit
+- git add . | git add <file-name>
+
+Commit changes
+- git commit -m “Add your message here”
+
+Push local changes to remote feature branch
+- git push origin <feature-branch>
+
+Pull changes into your local master/main branch
+- git checkout main
+- git pull —rebase | git pull
+
+Bring changes from local master/main to your feature branch
+- git checkout <feature-branch>
+- git merge main | git rebase main
+
+Stash changes
+- git stash
+
+Apply the last stash
+- git stash apply
+
+Bring remote (not yet merged) branch changes to your local feature branch
+- git pull origin <feature-branch>
